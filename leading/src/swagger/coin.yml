@@ -1,0 +1,9 @@
+paths:
+  /coins:
+    get:
+      tags:
+        - coin
+      summary: coin list
+      responses:
+        "200":
+          description: get coin list

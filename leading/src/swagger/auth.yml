@@ -1,0 +1,107 @@
+paths:
+  /auth/logIn:
+    post:
+      tags:
+        - auth
+      summary: 사용자 로그인
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                email:
+                  type: string
+                password:
+                  type: string
+      responses:
+        "200":
+          description: user log in success
+
+  /auth/isAuto:
+    patch:
+      tags:
+        - auth
+      summary: 자동 매도/매수
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                isAuto:
+                  type: number
+      responses:
+        "200":
+          description: success
+
+  /auth/openAPI:
+    patch:
+      tags:
+        - auth
+      summary: openAPI 등록
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                accessKey:
+                  type: string
+                secretKey:
+                  type: string
+      responses:
+        "200":
+          description: success
+
+  /auth/info:
+    get:
+      tags:
+        - auth
+      summary: 마이페이지
+      responses:
+        "200":
+          description: user information
+
+  /auth/balance:
+    get:
+      tags:
+        - auth
+      summary: 업비트 자산 조회
+      responses:
+        "200":
+          description: get upbit account success
+
+  /auth:
+    delete:
+      tags:
+        - auth
+      summary: 회원 탈퇴
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                password:
+                  type: string
+      responses:
+        "200":
+          description: signout success
+
+  /auth/fcmToken:
+    patch:
+      tags:
+        - auth
+      summary: 사용자 디바이스 토큰 등록
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                fcmToken:
+                  type: string
+      responses:
+        "200":
+          description: user devicetoken

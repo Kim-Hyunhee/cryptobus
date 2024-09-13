@@ -1,0 +1,27 @@
+paths:
+  /pickGroups:
+    get:
+      tags:
+        - pick
+      summary: history
+      parameters:
+        - in: query
+          name: page
+          type: integer
+      responses:
+        "200":
+          description: get history success
+
+  /pickGroups/{id}:
+    get:
+      tags:
+        - pick
+      summary: one pick group history
+      parameters:
+        - in: path
+          name: id
+          type: integer
+          required: true
+      responses:
+        "200":
+          description: get history success

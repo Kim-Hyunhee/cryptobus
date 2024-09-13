@@ -1,0 +1,23 @@
+paths:
+  /trades:
+    post:
+      tags:
+        - trade
+      summary: 매도/매수
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                pickId:
+                  type: integer
+                amount:
+                  type: string
+                userPrice:
+                  type: string
+                type:
+                  type: string
+      responses:
+        "200":
+          description: trade create success

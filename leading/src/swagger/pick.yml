@@ -1,0 +1,61 @@
+paths:
+  /picks:
+    post:
+      tags:
+        - pick
+      summary: 매도/매수 정보 저장
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              properties:
+                coinName:
+                  type: string
+                position:
+                  type: string
+                state:
+                  type: string
+                side:
+                  type: string
+                volume:
+                  type: string
+                price:
+                  type: string
+                orderType:
+                  type: string
+                botName:
+                  type: string
+                password:
+                  type: string
+                serialNumber:
+                  type: string
+      responses:
+        "200":
+          description: pick create success
+
+    get:
+      tags:
+        - pick
+      summary: pick list
+      parameters:
+        - in: query
+          name: page
+          type: integer
+      responses:
+        "200":
+          description: get pick list success
+
+  /picks/{id}:
+    get:
+      tags:
+        - pick
+      summary: one Pick
+      parameters:
+        - in: path
+          name: id
+          type: integer
+          required: true
+      responses:
+        "200":
+          description: get pick list success
