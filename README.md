@@ -47,23 +47,90 @@
 <div markdown="1">
  
 ```bash
-├─leading
 │  ├─src
+│  │  │  app.ts
+│  │  │  database.ts
+│  │  │  index.ts
+│  │  │
 │  │  ├─apis
+│  │  │      idealFarm.ts
+│  │  │      upbit.ts
+│  │  │
 │  │  ├─controller
+│  │  │      auth.ts
+│  │  │      coin.ts
+│  │  │      pick.ts
+│  │  │      pickGroup.ts
+│  │  │      trade.ts
+│  │  │
 │  │  ├─entity
+│  │  │      bot.ts
+│  │  │      coin.ts
+│  │  │      index.ts
+│  │  │      pick.ts
+│  │  │      pickGroup.ts
+│  │  │      trade.ts
+│  │  │      user.ts
+│  │  │
 │  │  ├─helper
+│  │  │      auth.ts
+│  │  │      fcm.ts
+│  │  │      pick.ts
+│  │  │
 │  │  ├─router
+│  │  │      auth.ts
+│  │  │      coin.ts
+│  │  │      index.ts
+│  │  │      pick.ts
+│  │  │      pickGroup.ts
+│  │  │      trade.ts
+│  │  │
 │  │  ├─service
+│  │  │      auth.ts
+│  │  │      bot.ts
+│  │  │      coin.ts
+│  │  │      noti.ts
+│  │  │      pick.ts
+│  │  │      pickGroup.ts
+│  │  │      trade.ts
+│  │  │
 │  │  └─swagger
+│  │          auth.yml
+│  │          coin.yml
+│  │          index.ts
+│  │          pick.yml
+│  │          pickGroup.yml
+│  │          trade.yml
+│  │
 │  └─test
 │      ├─helper
+│      │      pick.test.ts
+│      │
 │      └─router
+│              auth.test.ts
+│              coin.test.ts
+│              index.test.ts
+│              pick.test.ts
+│
 └─upbit
+    │  package-lock.json
+    │  package.json
+    │  tsconfig.json
+    │
     └─src
+        │  app.ts
+        │  index.ts
+        │
         ├─apis
+        │      upbit.ts
+        │
         ├─controller
+        │      auth.ts
+        │      order.ts
+        │
         └─router
+                auth.ts
+                order.ts
 ```
 </div>
 </details>
